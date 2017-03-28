@@ -1,0 +1,17 @@
+<p>
+  sing-in-form works!
+</p>
+<h1> Login From </h1>
+<form [formGroup]="myLoginForm" (ngSubmit)="onSubmit()">
+   <div class="form-group">
+     UserName <input formControlName="userName" type="text" placeholder="EnterTheUserName Between 5 to 8 Charactors">
+     
+     <br>
+     Email Address <input formControlName ="emailAddress" type="email" placeholder="example@gmail.com">
+     <br>
+     Enter Password <input formControlName="password" type="text"> 
+     <br>
+     <button type="submit" [disabled]="!myLoginForm.valid" class="btn btn-primary">Sign In</button>
+    
+   </div>
+ </form>

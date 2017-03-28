@@ -1,0 +1,17 @@
+<app-header-menu> </app-header-menu>
+<p>
+  my-pipe works!
+</p>
+<h5>{{ strName | uppercase}} </h5>
+<h5> {{strOther | lowercase }} </h5>
+<h5>{{ testNum | currency:'USD':true}} </h5>
+<h5> {{dt1 | date}} </h5>
+<h5> {{dt1 | date:fullDate}} </h5>
+<h5> {{dt1 | date:"MM/dd/yyyy"}} </h5>
+<h5> {{dt1 | date: "dd / MMM / yyyy"}} </h5>
+<h5> {{dt1 | date:'dd MMMM y'}} </h5>
+<h5> {{a | percent :'.1' }}
+<h5> Input Any Number : <input type="number" (keyup)=0 #inputNum1></h5>
+<h5> {{ inputNum1.value | square }}</h5>
+<h5> any text to convert in title case :<input type="text" (keyup)=0 #inputStr> </h5>
+<h5> {{ inputStr.value | titleCase}}

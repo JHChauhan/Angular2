@@ -1,0 +1,8 @@
+<!--<h3>{{}}</h3>-->
+
+<div class="input-group input-group-lg">
+  <span class="input-group-addon glyphicon glyphicon-search" id="sizing-addon1"></span>
+  <input #input1 type="text" class="form-control" (keyup)="onKeyPress(input1.value)" placeholder="Search Collection Name" aria-describedby="sizing-addon1">
+   <h3> {{input1.value}}</h3>
+   
+</div>

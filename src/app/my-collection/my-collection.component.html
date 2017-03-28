@@ -1,0 +1,37 @@
+
+<div class="container-fluid">
+
+  <div class="col-md-3">
+    <app-sidebar (searched)="onKeyPressed($event)" [searchCollection]='searchCollection'></app-sidebar>
+  </div>
+
+  <div class="col-md-9">
+  
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Collection Name</th>
+          <th>Profile Photo</th>
+          <th>Cover Photo</th>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of allCollections">
+          
+          <td>{{item.coll_name}}</td>
+          <td><span class="thumbnail"><img src="http://localhost:3000/{{item.profile_photo}}" height="150px" width="150px" /></span></td>
+          <td><span class="thumbnail"><img src="http://localhost:3000/{{item.cover_photo}}" height="150px" width="150px" /></span></td>
+          <!--<td><span class="thumbnail"><img src="https://reunirbackend.herokuapp.com/{{item.profile_photo}}" height="150px" width="150px" /></span></td>
+             <td><span class="thumbnail"><img src="https://reunirbackend.herokuapp.com/{{item.cover_photo}}" height="150px" width="150px" /></span></td>-->
+          <td>{{item.date}}</td>
+          <td>{{item.description}}</td>
+          <!-- <td><button (click)="updateCollection(item.coll_id)" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+              <button (click)="deleteCollection(item)" class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash"></span></button></td>-->
+        </tr>
+      </tbody>
+    </table>
+  </div>

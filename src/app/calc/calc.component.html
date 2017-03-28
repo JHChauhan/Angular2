@@ -1,0 +1,14 @@
+<app-header-menu> </app-header-menu>
+
+<div>
+    <input type="number" #inNum1>
+    <input type="number" #inNum2>
+    
+    <p>answer =  {{ans}} </p>
+     <br>
+    <button (click)="onAdd(inNum1.value,inNum2.value)"> + </button>
+    <button (click)="onSub(inNum1.value,inNum2.value)"> - </button>
+    <button (click)="onMulti(inNum1.value,inNum2.value)"> x </button>
+    <button (click) ="onDiv(inNum1.value,inNum2.value)"> / </button>
+
+</div>

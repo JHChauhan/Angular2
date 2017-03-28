@@ -1,0 +1,44 @@
+
+<app-header-menu> </app-header-menu>
+
+<p>
+  addtask works!
+</p>
+<div class="container">
+ 
+<form (ngSubmit)="addTaskSubmit()"  #addTaskForm="ngForm">
+<label for="id">Id</label>
+<div class="form-group"> 
+<input type="number" [(ngModel)]="modelData.tId" 
+name="id"
+class="form-control" id="tid"
+required #tid="ngModel">
+</div>
+<div [hidden]="tid.valid || tid.pristine"
+     class="alert alert-danger"> Task Id is required
+ </div>
+&nbsp;
+<div class="form-group">
+<label for="name">Task</label>
+<input type="text" [(ngModel)]="modelData.tName"
+name="tName"
+class="form-control" id="tname"
+required #tname="ngModel">
+ </div>
+<div [hidden]="tname.valid || tname.pristine"
+class="alert alert-danger">
+Task Title is required
+ </div>
+<div class="form-group">
+<label for="power">Status</label>
+
+
+<select class="form-control" id="newStatus"
+[(ngModel)]="modelData.tStatus" name="tStatus"
+required >
+<option *ngFor="let i of newStatus" [value]="i">{{i}}</option>
+</select>
+</div>
+<button type="submit" class="btn btn-default form-control" [disabled]="!addTaskForm.form.valid" >Add Task</button>
+
+</form>

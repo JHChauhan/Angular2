@@ -1,0 +1,22 @@
+<app-header-menu> </app-header-menu>
+<h1> Array </h1>
+
+<ul>
+    <li *ngFor="let member of myArray; let i=index">
+        {{member}} => has index of {{i}} </li>
+</ul>
+
+<button (click)=onClick(Button1.text) name="myButton" #Button1> {{txtButton}}  </button>
+ <div >
+   <p *ngIf=!flag>  you can hide me    </p>
+  
+ </div>
+ <input type="number"  (change)="0" (keyup)="onKeyUp(inNum1.value)" #inNum1> 
+ <h1> {{inNum1.value}} </h1>
+
+ <div [ngSwitch]="a">
+    <div *ngSwitchCase="1">FY</div>
+    <div *ngSwitchCase="2">SY</div>
+    <div *ngSwitchCase="3">TY</div>
+    <div *ngSwitchDefault>InValid Input</div>
+</div>

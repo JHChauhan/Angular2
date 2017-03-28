@@ -1,0 +1,17 @@
+.jobDone{
+  color: blue;
+
+}
+
+.jobPending
+{
+    color:darkred;
+
+}
+
+.jobForwarded
+{
+    color:darkorange;
+    
+}
+
